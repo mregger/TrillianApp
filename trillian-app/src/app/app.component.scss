@@ -5,17 +5,25 @@
     height: 0.9vw;
 }
 
-.chat-message-box {
-  position: sticky;
-  bottom: auto;
+.my-chat-message-box {
+  position: relative;
+  float: right;
   patting: 5px;
+  right: 10px;
+}
+
+.other-chat-message-box {
+  position: relative;
+  float: right;
+  patting: 5px;
+  left: 10px;
 }
 
 .chat-input {
     position: fixed;
     bottom: 0px;
     padding-top: 20px;
-    width: 1000%;
+    width: 100%;
 }
 
 .chat-list {

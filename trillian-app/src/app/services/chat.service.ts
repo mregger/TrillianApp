@@ -10,18 +10,19 @@ import {
 import { map, tap } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
+import { IMessage } from '../interfaces/message.type';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
-  private _ws: Subject<string>;
+  private _ws: Subject<IMessage>;
 
   constructor() {
 
   }
 
-  public connect(): Subject<string> {
+  public connect(): Subject<IMessage> {
     if (!this._ws) {
       this._ws = this.create();
       console.log("Successfully connected: " + environment.url);
@@ -29,10 +30,10 @@ export class ChatService {
     return this._ws;
   }
 
-  public create(): Subject<string> {
+  public create(): Subject<IMessage> {
     let ws = new WebSocket(environment.url);
 
-    let observable = Observable.create((obs: Observer<string>) => {
+    let observable = Observable.create((obs: Observer<IMessage>) => {
       ws.onmessage = obs.next.bind(obs);
       ws.onerror = obs.error.bind(obs);
       ws.onclose = obs.complete.bind(obs);
