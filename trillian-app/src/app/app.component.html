@@ -3,24 +3,31 @@
 <router-outlet></router-outlet>
 
 <div class="chat-container">
-  <mat-list class="chat-list">
+  <mat-list class="chat-list" fxLayout="row wrap">
     <mat-list-item *ngFor="let message of messageStream">
-      <mat-card
-      * ngIf="message.from == username; else leftChatBox"
+      <div
+      *ngIf="message.from == username; else leftChatBox"
       class="my-chat-message-box">
-        <p mat-line>
-          <span>
-            {{message.content}}
-          </span>
-        </p>
-      </mat-card>
-      <mat-card #leftChatBox class="other-chat-message-box">
-        <p mat-line>
-          <span>
-            {{message.content}}
-          </span>
-        </p>
-      </mat-card>
+        <mat-card class="message-box">
+          <p mat-line>
+            <span>
+              {{message.content}}
+            </span>
+          </p>
+        </mat-card>
+      </div>
+      <ng-template
+        #leftChatBox
+        class="other-chat-message-box"
+      >
+        <mat-card>
+          <p mat-line>
+            <span>
+              {{message.content}}
+            </span>
+          </p>
+        </mat-card>
+      </ng-template>
     </mat-list-item>
   </mat-list>
 </div>
