@@ -5,17 +5,29 @@
     height: 0.9vw;
 }
 
-.chat-message-box {
-  position: sticky;
-  bottom: auto;
-  patting: 5px;
+.message-box{
+    max-width: 50%;
+}
+
+.my-chat-message-box {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.other-chat-message-box {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .chat-input {
     position: fixed;
     bottom: 0px;
     padding-top: 20px;
-    width: 1000%;
+    width: 100%;
 }
 
 .chat-list {
