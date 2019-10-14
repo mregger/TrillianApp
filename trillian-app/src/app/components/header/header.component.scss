@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+// @include angular-material-theme($trillian-app-theme);
+
+.app-header {
+  // color: $trillian-app-primary;
+  background-color: #85e3ff;
+  width: 100%;
+  height: 50px;
+  align-content: center;
+  justify-content: flex-start;
+}
