@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   public messageStream: IMessage[];
   public response: string;
   public username: string;
+  public messageModel: string;
 
   constructor(
     public chat: ChatService,

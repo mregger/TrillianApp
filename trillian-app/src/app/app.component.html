@@ -2,8 +2,10 @@
 
 <router-outlet></router-outlet>
 
+<app-header></app-header>
+
 <div class="chat-container">
-  <mat-list class="chat-list" fxLayout="row wrap">
+  <mat-list class="chat-list">
     <mat-list-item *ngFor="let message of messageStream">
       <div
       *ngIf="message.from == username; else leftChatBox"
@@ -37,8 +39,8 @@
     <mat-form-field>
       <input matInput
       #inputMessage
-      [(ngModel)]="message"
-      (keyup.enter)="onEnter(message)"
+      [(ngModel)]="messageModel"
+      (keyup.enter)="onEnter(messageModel)"
       value="...">
     </mat-form-field>
   </mat-card>
