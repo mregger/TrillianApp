@@ -1,0 +1,8 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$trillian-app-primary: mat-palette($mat-indigo);
+$trillian-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$trillian-app-warn: mat-palette($mat-red);
+$trillian-app-theme: mat-light-theme($trillian-app-primary, $trillian-app-accent, $trillian-app-warn);
+
+@include angular-material-theme($trillian-app-theme);
