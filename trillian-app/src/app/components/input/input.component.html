@@ -1,0 +1,10 @@
+<mat-card class="chat-input">
+  <mat-form-field>
+    <input
+      matInput
+      #inputMessage
+      [(ngModel)]="messageModel"
+      (keyup.enter)="onEnter(messageModel)"
+      value="...">
+  </mat-form-field>
+</mat-card>
