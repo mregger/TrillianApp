@@ -2,8 +2,10 @@
     margin-top: 10px;
     padding-top: 20px;
     width: 100%;
-}
+    display: flex;
+    flex-direction: row;
 
-.input-field {
-  width: 90%;
+    .input-field {
+      width: calc(90% - 20px);
+    }
 }
