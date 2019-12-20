@@ -1,0 +1,19 @@
+.my-chat-message-box {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-box{
+  max-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.other-chat-message-box {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+}

@@ -1,0 +1,23 @@
+<div
+*ngIf="message.from == username; else leftChatBox"
+class="my-chat-message-box">
+  <mat-card class="message-box">
+    <p mat-line>
+      <span>
+        {{message.content}}
+      </span>
+    </p>
+  </mat-card>
+</div>
+<ng-template
+  #leftChatBox
+  class="other-chat-message-box"
+>
+  <mat-card>
+    <p mat-line>
+      <span>
+        {{message.content}}
+      </span>
+    </p>
+  </mat-card>
+</ng-template>
