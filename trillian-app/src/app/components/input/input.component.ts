@@ -29,8 +29,9 @@ export class InputComponent implements OnInit {
   }
 
   public onEnter(): void {
-    console.dir(this.messageModel);
-    this.onMessageInput.emit(this.formControl.value);
+    if (this.formControl.value && this.formControl.value.length > 0) {
+      this.onMessageInput.emit(this.formControl.value);
+    }
     // clear input afterwards
     this.inputMessage.nativeElement.value = null;
   }

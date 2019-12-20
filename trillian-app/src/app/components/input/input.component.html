@@ -4,7 +4,12 @@
     matInput
     #inputMessage
     [placeholder]="'Say hi'"
-    [formControl]="formControl"
-    (keyup.enter)="onEnter(messageModel)">
+    [formControl]="formControl">
   </mat-form-field>
+  <button
+    mat-button
+    [disableRipple]="true"
+    (click)="onEnter()">
+    <mat-icon>send</mat-icon>
+  </button>
 </form>
