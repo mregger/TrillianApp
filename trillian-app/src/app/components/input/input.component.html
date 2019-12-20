@@ -1,0 +1,15 @@
+<form class="chat-input">
+  <mat-form-field class="input-field">
+    <input
+    matInput
+    #inputMessage
+    [placeholder]="'Say hi'"
+    [formControl]="formControl">
+  </mat-form-field>
+  <button
+    mat-button
+    [disableRipple]="true"
+    (click)="onEnter()">
+    <mat-icon>send</mat-icon>
+  </button>
+</form>
