@@ -6,6 +6,7 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -15,6 +16,8 @@ import {
 export class InputComponent implements OnInit {
 
   public messageModel: string;
+
+  public formControl: FormControl = new FormControl('');
 
   @Output() public onMessageInput: EventEmitter<string> = new EventEmitter<string>();
 
@@ -26,7 +29,8 @@ export class InputComponent implements OnInit {
   }
 
   public onEnter(): void {
-    this.onMessageInput.emit(this.messageModel);
+    console.dir(this.messageModel);
+    this.onMessageInput.emit(this.formControl.value);
     // clear input afterwards
     this.inputMessage.nativeElement.value = null;
   }
