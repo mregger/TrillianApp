@@ -15,7 +15,8 @@ export class MessageBoxComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit(): void {
+    console.dir(this.message.from);
   }
 
 }

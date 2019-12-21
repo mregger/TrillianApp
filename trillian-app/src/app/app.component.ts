@@ -46,5 +46,13 @@ export class AppComponent implements OnInit {
     console.dir('Entered: ', message);
     this.messageStream.push(message);
     this.messages.next(message);
+
+    const fakeMessage: IMessage = {
+      from: 'balls',
+      content: 'HACKERMAN',
+      timestamp: 123,
+    };
+    this.messageStream.push(fakeMessage);
+    this.messages.next(fakeMessage);
   }
 }

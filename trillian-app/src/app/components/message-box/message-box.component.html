@@ -1,23 +1,47 @@
-<div
-*ngIf="message.from == username; else leftChatBox"
-class="my-chat-message-box">
-  <mat-card class="message-box">
-    <p mat-line>
-      <span>
-        {{message.content}}
-      </span>
-    </p>
-  </mat-card>
-</div>
-<ng-template
+<!-- <mat-list-item>
+  <div
+  *ngIf="message.from === username; else leftChatBox"
+  class="my-chat-message-box">
+    <mat-card class="message-box">
+      <p mat-line>
+        <span>
+          {{message.content}}
+        </span>
+      </p>
+    </mat-card>
+  </div>
+  <ng-template
   #leftChatBox
   class="other-chat-message-box"
->
+  >
   <mat-card>
     <p mat-line>
       <span>
+        butts
         {{message.content}}
       </span>
     </p>
   </mat-card>
+  </ng-template>
+</mat-list-item> -->
+
+<div
+  *ngIf="message.from === username; else leftChatBox"
+  class="my-chat-message-box">
+  <mat-card class="message-box">
+    <mat-card-content>
+      {{message.content}}
+    </mat-card-content>
+  </mat-card>
+</div>
+<ng-template
+  #leftChatBox>
+  <div class="other-chat-message-box">
+    <mat-card class="message-box">
+      <mat-card-content>
+        balls
+        {{message.content}}
+      </mat-card-content>
+    </mat-card>
+  </div>
 </ng-template>
