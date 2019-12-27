@@ -16,3 +16,8 @@
   max-width: 50%;
   background-color: green;
 }
+
+.message-wrap {
+  // dynamically sets height of p tag according to message content
+  overflow-wrap: break-word;
+}

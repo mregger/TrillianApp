@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
 
     const fakeMessage: IMessage = {
       from: 'balls',
-      content: 'HACKERMAN',
+      content: 'ASDASDASDASDASDasdasdasdasdasdasdASDASDASDASDASDasdasdasdasdasdasdASDASDASDASDASDasdasdasdasdasdasdASDASDASDASDASDasdasdasdasdasdasd',
       timestamp: 123,
     };
     this.messageStream.push(fakeMessage);
