@@ -1,4 +1,11 @@
+.header-position {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
 .chat-container {
+    padding-top: 75px;
     width: 100%;
     height: 100%;
 
