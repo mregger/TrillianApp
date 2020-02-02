@@ -7,4 +7,5 @@ trillian-app/node_modules
 
 # android files
 trillian-andoid-app
-
+trillian-app/platforms
+trillian-app/plugins
