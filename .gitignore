@@ -1,3 +1,10 @@
+#build
+trillian-app/dist
+trillian-app/www
+
 #dependencies
 trillian-app/node_modules
+
+# android files
+trillian-andoid-app
 
