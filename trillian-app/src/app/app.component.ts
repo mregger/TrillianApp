@@ -13,7 +13,7 @@ import { IMessage } from './interfaces/message.type';
 })
 export class AppComponent implements OnInit {
   public title: string = 'trillian-app';
-  public messages: Subject<IMessage>;
+  public messages: Subject<IMessage> = new Subject<IMessage>();
   public messageStream: IMessage[];
   public response: string;
   public username: string;
