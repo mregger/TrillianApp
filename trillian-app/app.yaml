@@ -1,0 +1,22 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+  - url: /
+    static_files: dist/trillian-app/index.html
+    upload: dist/trillian-app/index.html
+  - url: /
+    static_dir: dist/trillian-app
+
+skip_files:
+  - e2e/
+  - node_modules/
+  - platforms/
+  - www/
+  - src/
+  - ^(.*/)?\..*$
+  - ^(.*/)?.*\.json$
+  - ^(.*/)?.*\.md$
+  - ^(.*/)?.*\.yaml$
+  - ^LICENSE
