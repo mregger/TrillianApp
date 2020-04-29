@@ -1,7 +1,42 @@
-// @import '~@angular/material/theming';
-// @include angular-material-theme($trillian-app-theme);
-@import 'theme.scss';
+@import '~@angular/material/theming';
+@include mat-core();
 
+$primary: mat-palette($mat-teal, 500);
+$accent: mat-palette($mat-teal, 100);
+$warn: mat-palette($mat-red);
+$theme: mat-dark-theme($primary, $accent, $warn);
+
+$background: mat-palette($mat-blue-grey, 800);
+$foreground: mat-palette($mat-gray, 700);
+
+@include angular-material-theme($theme);
+
+html {
+  background-color: mat-color($background);
+  font-family: 'Roboto', sans-serif;
+}
+
+code {
+  background-color: rgba(0,0,0,.03);
+}
+pre code {
+  display: block;
+  border: 1px solid #999;
+}
 body {
-  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  color: white;
+  background-color: mat-color($primary);
+}
+.mat-form-field {
+  color: white;
 }
